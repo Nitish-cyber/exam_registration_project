@@ -1,0 +1,17 @@
+<!-- registration/templates/registration/exam_registration.html -->
+
+{% extends 'base.html' %}
+{%load static%}
+
+{% block title %}Exam Registration{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Exam Registration Form</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
